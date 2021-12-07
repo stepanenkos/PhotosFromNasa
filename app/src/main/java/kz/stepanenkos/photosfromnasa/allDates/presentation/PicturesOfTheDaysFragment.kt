@@ -1,22 +1,19 @@
-package kz.stepanenkos.photosfromnasa.ui.dashboard
+package kz.stepanenkos.photosfromnasa.allDates.presentation
 
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import kz.stepanenkos.photosfromnasa.R
-import kz.stepanenkos.photosfromnasa.databinding.FragmentDashboardBinding
+import kz.stepanenkos.photosfromnasa.databinding.FragmentPicturesOfTheDaysBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class DashboardFragment : Fragment() {
-    private val viewModel by viewModel<DashboardViewModel>()
+class PicturesOfTheDaysFragment : Fragment() {
+    private val viewModel by viewModel<PicturesOfTheDaysViewModel>()
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentPicturesOfTheDaysBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -26,18 +23,18 @@ class DashboardFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentPicturesOfTheDaysBinding.inflate(inflater, container, false)
         viewModel.getAllDates()
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         viewModel.text.observe(viewLifecycleOwner) {
             Log.d("TAG", "$it")
         }
+        viewModel.error.observe(viewLifecycleOwner) {
+            Log.d("TAG", "$it")
+            Toast.makeText(requireContext(), "$it", Toast.LENGTH_SHORT).show()
+        }
+        return binding.root
     }
 
     override fun onDestroyView() {

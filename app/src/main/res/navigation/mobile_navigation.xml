@@ -4,21 +4,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home"
+    app:startDestination="@id/navigation_pictures_of_the_days"
     >
+    <fragment
+        android:id="@+id/navigation_pictures_of_the_days"
+        android:name="kz.stepanenkos.photosfromnasa.allDates.presentation.PicturesOfTheDaysFragment"
+        android:label="@string/title_pictures_of_the_days"
+        tools:layout="@layout/fragment_pictures_of_the_days"
+        />
 
     <fragment
         android:id="@+id/navigation_home"
         android:name="kz.stepanenkos.photosfromnasa.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home"
-        />
-
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="kz.stepanenkos.photosfromnasa.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard"
         />
 
     <fragment

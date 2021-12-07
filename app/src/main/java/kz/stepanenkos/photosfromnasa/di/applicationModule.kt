@@ -5,7 +5,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.jackson.JacksonConverterFactory
 
-private const val BASE_URL = "https://api.nasa.gov/EPIC/api/"
+private const val BASE_URL = "https://api.nasa.gov/planetary/"
 private const val API_KEY = "dRse925lQxnnhBT9sHWrkRxUBnBheb966iSw68IE"
 
 val applicationModule = module {
