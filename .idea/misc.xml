@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProjects/PhotosFromNasa/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="..\:/AndroidProjects/PhotosFromNasa/app/src/main/res/layout/fragment_pictures_of_the_days.xml" value="0.20677083333333332" />
+        <entry key="..\:/AndroidProjects/PhotosFromNasa/app/src/main/res/layout/pictures_item.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/PhotosFromNasa/app/src/main/res/menu/bottom_nav_menu.xml" value="0.228125" />
       </map>
     </option>

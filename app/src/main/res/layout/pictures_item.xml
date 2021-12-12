@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/picture_of_the_day_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_8x"
+    android:layout_marginTop="@dimen/margin_8x"
+    android:layout_marginBottom="@dimen/margin_8x"
+    app:cardCornerRadius="@dimen/corner_radius_8x"
+    android:elevation="@dimen/elevation_4x"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/picture_of_the_day_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_8x"
+            android:layout_marginVertical="@dimen/margin_8x"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Title"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/picture_of_the_day_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_8x"
+            android:layout_marginVertical="@dimen/margin_8x"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            tools:text="Photo taken: 12 December 2021"
+            />
+
+        <ImageView
+            android:id="@+id/picture_of_the_day_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_8x"
+            android:layout_marginVertical="@dimen/margin_8x"
+            android:contentDescription="@string/picture_of_the_day_from_nasa_description"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/picture_of_the_day_copyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_8x"
+            android:layout_marginVertical="@dimen/margin_8x"
+            android:textSize="12sp"
+            tools:text="Copyright: FirstName LastName"
+            />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
