@@ -3,4 +3,5 @@
     <string name="title_home">Home</string>
     <string name="title_pictures_of_the_days">Astronomy Picture of the Day</string>
     <string name="title_notifications">Notifications</string>
+    <string name="picture_of_the_day_from_nasa_description">Picture of the day from NASA</string>
 </resources>
