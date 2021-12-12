@@ -22,7 +22,7 @@ class PicturesOfTheDaysViewModel(
 
     fun getAllDates() {
         viewModelScope.launch(Dispatchers.IO) {
-            when(val allDates = nasaRepository.getPicturesOfTheRangeDays(TimeHelper.getToday())) {
+            when(val allDates = nasaRepository.getPicturesOfTheRangeDays(TimeHelper.getSpecificDay(-29))) {
                 is ResponseData.Success -> {
                     _text.postValue(allDates.result!!)
                 }
