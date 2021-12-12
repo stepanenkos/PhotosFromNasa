@@ -16,9 +16,11 @@ class DefaultNasaRepository(
         return try {
             val allDates = nasaDataSource.getPicturesOfTheRangeDays(startTime)
             if(allDates.isSuccessful) {
-                ResponseData.Success(picturesOfTheDaysApiDataMapper.map(allDates.body()))
+                val body = allDates.body()?.reversed()
+
+                ResponseData.Success(picturesOfTheDaysApiDataMapper.map(body))
             } else {
-                ResponseData.Error(Exception(allDates.errorBody().toString()))
+                ResponseData.Error(Exception(allDates.errorBody()?.string()))
             }
         } catch (e: Exception) {
             ResponseData.Error(e)

@@ -6,7 +6,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-const val API_DATE_FORMAT = "yyyy-MM-DD"
+const val API_DATE_FORMAT = "yyyy-MM-dd"
 
 interface NasaDataSource {
 
